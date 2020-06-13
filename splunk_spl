@@ -1,0 +1,1 @@
+| stats first as * | table "Initialize Hardware", "Acquire Downstream Channel", "Upstream Ranging", "DHCP bound", "Set Time-of-Day", "Configuration File Download", "Registration", "Internet" | transpose | rename column as Service, "row 1" as Status | replace "Active" with "Complete"
